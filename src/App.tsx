@@ -1,3 +1,5 @@
-export function App() {
-  return <div>Hello</div>
+import { Button } from './components/ui/button'
+
+export const App = () => {
+  return <Button as={'button'} />
 }
