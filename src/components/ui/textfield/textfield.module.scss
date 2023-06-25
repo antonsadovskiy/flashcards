@@ -10,7 +10,7 @@
 .input {
   all: unset;
 
-  box-sizing: border-box;
+  min-width: 280px;
   padding: 6px 12px;
 
   font-size: var(--font-size-m);
@@ -45,6 +45,7 @@
 .inputError {
   all: unset;
 
+  min-width: 280px;
   padding: 6px 0 6px 12px;
 
   font-size: var(--font-size-m);

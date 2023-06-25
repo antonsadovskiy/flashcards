@@ -1,0 +1,8 @@
+@forward 'src/styles/colors';
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--color-dark-700);
+  border: 1px solid #313131;
+}

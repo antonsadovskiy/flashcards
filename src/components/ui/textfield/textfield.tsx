@@ -8,18 +8,27 @@ type TextFieldProps = {
   variant?: 'password' | 'search'
   disabled?: boolean
   error?: string
+  label?: string
   iconStart?: ReactNode
   value?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 export const TextField = (props: TextFieldProps) => {
-  const { variant = 'default', disabled = false, error = '', iconStart, value, ...rest } = props
+  const {
+    variant = 'default',
+    disabled = false,
+    error = '',
+    iconStart,
+    value,
+    label,
+    ...rest
+  } = props
 
   return (
     <div className={s.inputContainer}>
       {props.variant !== 'search' && (
         <Typography variant={'body2'} className={disabled ? s.disabled : s.label}>
-          Input
+          {label}
         </Typography>
       )}
       <div className={s.textField}>

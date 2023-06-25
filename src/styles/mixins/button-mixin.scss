@@ -1,6 +1,4 @@
 @mixin button-mixin($color, $box-shadow, $font-size, $background-color) {
-  all: unset;
-
   display: flex;
   gap: 10px;
   align-items: center;
