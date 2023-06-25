@@ -1,0 +1,127 @@
+@forward 'src/styles/typography';
+
+@import 'src/styles/mixins/typography-mixin';
+
+.large {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-xxl),
+    var(--font-family),
+    var(--font-weight-bold),
+    var(--line-height-l)
+  );
+}
+
+.h1 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-xl),
+    var(--font-family-primary),
+    var(--font-weight-bold),
+    var(--line-height-l)
+  );
+}
+
+.h2 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-l),
+    var(--font-family-primary),
+    var(--font-weight-bold),
+    var(--line-height-m)
+  );
+}
+
+.h3 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-m),
+    var(--font-family-primary),
+    var(--font-weight-bold),
+    var(--line-height-m)
+  );
+}
+
+.body1 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-m),
+    var(--font-family-primary),
+    '',
+    var(--line-height-m)
+  );
+}
+
+.subtitle1 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-m),
+    var(--font-family-primary),
+    var(--font-weight-bold),
+    var(--line-height-m)
+  );
+}
+
+.body2 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-s),
+    var(--font-family-primary),
+    '',
+    var(--line-height-m)
+  );
+}
+
+.subtitle2 {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-s),
+    var(--font-family-primary),
+    var(--font-weight-bold),
+    var(--line-height-m)
+  );
+}
+
+.caption {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-xs),
+    var(--font-family-primary),
+    '',
+    var(--line-height-s)
+  );
+}
+
+.overline {
+  @include typography-mixin(
+    var(--color-dark-900),
+    var(--font-size-xs),
+    var(--font-family-primary),
+    var(--font-weight-bold),
+    var(--line-height-s)
+  );
+}
+
+.link1 {
+  @include typography-mixin(
+    var(--color-info-500),
+    var(--font-size-s),
+    var(--font-family-primary),
+    '',
+    var(--line-height-m)
+  );
+
+  text-decoration-line: underline;
+}
+
+.link2 {
+  @include typography-mixin(
+    var(--color-info-500),
+    var(--font-size-xs),
+    var(--font-family-primary),
+    '',
+    var(--line-height-s)
+  );
+
+  text-decoration-line: underline;
+}
