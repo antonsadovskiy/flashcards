@@ -14,15 +14,7 @@ type TextFieldProps = {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 export const TextField = (props: TextFieldProps) => {
-  const {
-    variant = 'default',
-    disabled = false,
-    error = '',
-    iconStart,
-    value,
-    label,
-    ...rest
-  } = props
+  const { variant = 'default', disabled = false, error, iconStart, value, label, ...rest } = props
 
   return (
     <div className={s.inputContainer}>

@@ -1,0 +1,50 @@
+@forward 'src/styles/colors';
+
+button {
+  all: unset;
+}
+
+.checkboxContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  .label {
+    color: var(--color-light-100);
+  }
+
+  .disabledLabel {
+    color: var(--color-dark-100);
+  }
+
+  .checkboxRoot {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: transparent;
+    border: 3px solid var(--color-light-900);
+    border-radius: 2px;
+
+    .checkboxIndicator {
+      color: var(--color-dark-900);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+
+      .checkboxIndicator {
+        color: var(--color-dark-100);
+      }
+    }
+  }
+
+  .checked {
+    background-color: white;
+    border: 3px solid white;
+  }
+}
