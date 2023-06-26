@@ -23,11 +23,16 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const DefaultTextField: Story = {}
+export const DefaultTextField: Story = {
+  args: {
+    label: 'Input',
+  },
+}
 
 export const PasswordTextField: Story = {
   args: {
     variant: 'password',
+    label: 'Password',
   },
 }
 
@@ -44,5 +49,7 @@ export const TextFieldWithError: Story = {
 }
 
 export const DisabledTextField: Story = {
-  render: () => <TextField disabled />,
+  args: {
+    disabled: true,
+  },
 }

@@ -8,7 +8,7 @@
   @include button-mixin(
     var(--color-light-100),
     0 4px 18px 0 rgba(140, 97, 255, 0.35),
-    14px,
+    var(--font-size-s),
     var(--color-accent-500)
   );
 
@@ -34,7 +34,7 @@
   @include button-mixin(
     var(--color-light-100),
     0 4px 4px 0 rgba(77, 86, 96, 0.13),
-    14px,
+    var(--font-size-s),
     var(--color-dark-300)
   );
 
@@ -57,7 +57,7 @@
 }
 
 .tertiary {
-  @include button-mixin(var(--color-accent-500), '', 14px, transparent);
+  @include button-mixin(var(--color-accent-500), '', var(--font-size-s), transparent);
 
   border: 2px solid var(--color-accent-500);
 
@@ -66,14 +66,14 @@
     border: 2px solid var(--color-accent-700);
   }
 
-  &:active {
-    background-color: var(--color-accent-900);
-    border: 2px solid var(--color-accent-700);
-  }
-
   &:focus {
     background-color: transparent;
     border: 2px solid var(--color-info-700);
+  }
+
+  &:active {
+    background-color: var(--color-accent-900);
+    border: 2px solid var(--color-accent-700);
   }
 
   &:disabled {
@@ -84,7 +84,9 @@
 }
 
 .link {
-  @include button-mixin(var(--color-accent-500), '', 16px, transparent);
+  @include button-mixin(var(--color-accent-500), '', var(--font-size-m), transparent);
+
+  text-decoration-line: none;
 
   &:hover {
     color: var(--color-accent-300);

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { LogoutIcon } from '../icons/logout-icon'
+import { Typography } from '../typography'
 
 import { Button } from './'
 
@@ -25,7 +26,11 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     variant: 'primary',
-    children: 'Button primary',
+    children: (
+      <Typography variant={'subtitle2'} color={'light'}>
+        Button primary
+      </Typography>
+    ),
     disabled: false,
   },
 }
@@ -33,21 +38,33 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
-    children: 'Button secondary',
+    children: (
+      <Typography variant={'subtitle2'} color={'light'}>
+        Button secondary
+      </Typography>
+    ),
     disabled: false,
   },
 }
 export const Tertiary: Story = {
   args: {
     variant: 'tertiary',
-    children: 'Button tertiary',
+    children: (
+      <Typography variant={'subtitle2'} color={'accent'}>
+        Button tertiary
+      </Typography>
+    ),
     disabled: false,
   },
 }
 export const Link: Story = {
   args: {
     variant: 'link',
-    children: 'Button tertiary',
+    children: (
+      <Typography variant={'subtitle1'} color={'accent'}>
+        Button tertiary
+      </Typography>
+    ),
     disabled: false,
   },
 }
@@ -56,7 +73,9 @@ export const WithIcon: Story = {
   render: () => (
     <Button>
       <LogoutIcon />
-      Button primary
+      <Typography variant={'subtitle2'} color={'light'}>
+        Button primary
+      </Typography>
     </Button>
   ),
 }
@@ -64,7 +83,11 @@ export const WithIcon: Story = {
 export const FullWidth: Story = {
   args: {
     variant: 'primary',
-    children: 'Full Width Button',
+    children: (
+      <Typography variant={'subtitle2'} color={'light'}>
+        Full Width Button
+      </Typography>
+    ),
     disabled: false,
     fullWidth: true,
   },
@@ -72,8 +95,12 @@ export const FullWidth: Story = {
 
 export const AsLink: Story = {
   args: {
-    variant: 'primary',
-    children: 'Link that looks like a button',
+    variant: 'link',
+    children: (
+      <Typography variant={'subtitle1'} color={'accent'}>
+        Link that looks like a button
+      </Typography>
+    ),
     as: 'a',
     href: 'https://www.google.com',
   },
