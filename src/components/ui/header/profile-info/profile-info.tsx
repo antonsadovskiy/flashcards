@@ -7,7 +7,7 @@ import s from './profile-info.module.scss'
 export const ProfileInfo = () => {
   return (
     <div className={s.profileInfo}>
-      <Typography variant={'subtitle1'} className={s.subtitle}>
+      <Typography variant={'subtitle1'} defaultColor={true} className={s.subtitle}>
         Anton
       </Typography>
       <Avatar.Root className={s.AvatarRoot}>

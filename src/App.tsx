@@ -1,12 +1,9 @@
-import { Button } from './components/ui/button'
-import { Typography } from './components/ui/typography'
+import { ProfileInfo } from './components/ui/header/profile-info'
 
 export const App = () => {
   return (
-    <Button>
-      <Typography variant={'subtitle1'} color={'light'}>
-        some text
-      </Typography>
-    </Button>
+    <div style={{ color: 'black' }}>
+      <ProfileInfo />
+    </div>
   )
 }

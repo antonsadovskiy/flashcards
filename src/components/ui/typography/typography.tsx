@@ -18,13 +18,24 @@ export type TypographyProps<T extends ElementType = 'p'> = {
     | 'link1'
     | 'link2'
   className?: string
-  color?: 'light' | 'accent'
+  defaultColor?: boolean
 } & ComponentPropsWithoutRef<T>
 
 export const Typography = <T extends ElementType = 'p'>(
   props: TypographyProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof TypographyProps<T>>
 ) => {
-  const { variant = 'caption', className, as: Component = 'p', color = 'default', ...rest } = props
+  const {
+    variant = 'caption',
+    className,
+    as: Component = 'p',
+    defaultColor = false,
+    ...rest
+  } = props
 
-  return <Component className={`${s[variant]} ${s[color]}  ${className}`} {...rest} />
+  return (
+    <Component
+      className={`${s[variant]} ${defaultColor && s.defaultColor} ${className}`}
+      {...rest}
+    />
+  )
 }

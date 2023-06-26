@@ -5,7 +5,7 @@
 
 .large {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-xxl),
     var(--font-family),
     var(--font-weight-bold),
@@ -15,7 +15,7 @@
 
 .h1 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-xl),
     var(--font-family-primary),
     var(--font-weight-bold),
@@ -25,7 +25,7 @@
 
 .h2 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-l),
     var(--font-family-primary),
     var(--font-weight-bold),
@@ -35,7 +35,7 @@
 
 .h3 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-m),
     var(--font-family-primary),
     var(--font-weight-bold),
@@ -45,7 +45,7 @@
 
 .body1 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-m),
     var(--font-family-primary),
     '',
@@ -55,7 +55,7 @@
 
 .subtitle1 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-m),
     var(--font-family-primary),
     var(--font-weight-bold),
@@ -65,7 +65,7 @@
 
 .body2 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-s),
     var(--font-family-primary),
     '',
@@ -75,7 +75,7 @@
 
 .subtitle2 {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-s),
     var(--font-family-primary),
     var(--font-weight-bold),
@@ -85,7 +85,7 @@
 
 .caption {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-xs),
     var(--font-family-primary),
     '',
@@ -95,7 +95,7 @@
 
 .overline {
   @include typography-mixin(
-    var(--color-dark-900),
+    inherit,
     var(--font-size-xs),
     var(--font-family-primary),
     var(--font-weight-bold),
@@ -105,7 +105,7 @@
 
 .link1 {
   @include typography-mixin(
-    var(--color-info-500),
+    inherit,
     var(--font-size-s),
     var(--font-family-primary),
     '',
@@ -117,7 +117,7 @@
 
 .link2 {
   @include typography-mixin(
-    var(--color-info-500),
+    inherit,
     var(--font-size-xs),
     var(--font-family-primary),
     '',
@@ -127,10 +127,6 @@
   text-decoration-line: underline;
 }
 
-.light {
-  color: var(--color-light-100);
-}
-
-.accent {
-  color: var(--color-accent-300);
+.defaultColor {
+  color: var(--color-dark-900);
 }

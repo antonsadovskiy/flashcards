@@ -24,6 +24,9 @@ const meta = {
       ],
       control: { type: 'radio' },
     },
+    defaultColor: {
+      control: { type: 'boolean' },
+    },
   },
 } satisfies Meta<typeof Typography>
 
@@ -35,6 +38,7 @@ export const Large: Story = {
     variant: 'large',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 
@@ -43,6 +47,7 @@ export const H1: Story = {
     variant: 'h1',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 export const H2: Story = {
@@ -50,6 +55,7 @@ export const H2: Story = {
     variant: 'h2',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 
@@ -58,6 +64,7 @@ export const Body1: Story = {
     variant: 'body1',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 
@@ -66,6 +73,7 @@ export const Subtitle1: Story = {
     variant: 'subtitle1',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 
@@ -74,6 +82,7 @@ export const Body2: Story = {
     variant: 'body2',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 
@@ -82,6 +91,7 @@ export const Subtitle2: Story = {
     variant: 'subtitle2',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 
@@ -90,6 +100,7 @@ export const Caption: Story = {
     variant: 'caption',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 export const Overline: Story = {
@@ -97,6 +108,7 @@ export const Overline: Story = {
     variant: 'overline',
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'p',
+    defaultColor: true,
   },
 }
 export const Link1: Story = {
@@ -105,6 +117,7 @@ export const Link1: Story = {
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'a',
     href: 'https://www.google.com',
+    defaultColor: true,
   },
 }
 export const Link2: Story = {
@@ -113,5 +126,6 @@ export const Link2: Story = {
     children: 'Carosserie Test Zürich Stauffacherstrasse 31 8004 Zürich, ZH, CH',
     as: 'a',
     href: 'https://www.google.com',
+    defaultColor: true,
   },
 }
