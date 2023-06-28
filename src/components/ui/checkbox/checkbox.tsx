@@ -1,6 +1,7 @@
 import * as CheckBox from '@radix-ui/react-checkbox'
-import { CheckIcon } from '@radix-ui/react-icons'
 
+import { CheckedIcon } from '../icons/checked-icon'
+import { UncheckedIcon } from '../icons/unchecked-icon'
 import { Typography } from '../typography'
 
 import s from './checkbox.module.scss'
@@ -23,9 +24,7 @@ export const Checkbox = (props: CheckboxProps) => {
         disabled={disabled}
         onCheckedChange={onChange}
       >
-        <CheckBox.Indicator className={s.checkboxIndicator}>
-          <CheckIcon />
-        </CheckBox.Indicator>
+        {checked ? <CheckedIcon /> : <UncheckedIcon />}
       </CheckBox.Root>
       {label && (
         <Typography variant={'body2'} className={disabled ? s.disabledLabel : s.label}>

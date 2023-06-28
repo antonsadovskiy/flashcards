@@ -29,22 +29,29 @@ export const UncheckedCheckbox: Story = {
     checked: false,
   },
 }
-export const CheckboxWithLabel: Story = {
+export const CheckedCheckboxWithLabel: Story = {
   args: {
     checked: true,
-    label: 'Check-box',
+    label: 'checked',
   },
 }
-export const DisabledCheckbox: Story = {
+export const DisabledCheckedCheckboxWithLabel: Story = {
   args: {
     checked: true,
+    label: 'disabled checked',
     disabled: true,
   },
 }
-export const DisabledCheckboxWithLabel: Story = {
+export const UncheckedCheckboxWithLabel: Story = {
   args: {
-    checked: true,
+    checked: false,
+    label: 'unchecked',
+  },
+}
+export const DisabledUncheckedCheckboxWithLabel: Story = {
+  args: {
+    checked: false,
+    label: 'disabled unchecked',
     disabled: true,
-    label: 'Check-box',
   },
 }

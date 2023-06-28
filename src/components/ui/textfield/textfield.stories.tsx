@@ -1,4 +1,10 @@
+import { useState } from 'react'
+
 import { Meta, StoryObj } from '@storybook/react'
+
+import { EyeOpenIcon } from '../icons/eye-close-icon'
+import { EyeCloseIcon } from '../icons/eye-open-icon'
+import { SearchIcon } from '../icons/search-icon'
 
 import { TextField } from './textfield.tsx'
 
@@ -14,9 +20,6 @@ const meta = {
     disabled: {
       control: { type: 'boolean' },
     },
-    error: {
-      control: { type: 'boolean' },
-    },
   },
 } satisfies Meta<typeof TextField>
 
@@ -26,19 +29,34 @@ type Story = StoryObj<typeof meta>
 export const DefaultTextField: Story = {
   args: {
     label: 'Input',
+    disabled: true,
   },
 }
 
 export const PasswordTextField: Story = {
-  args: {
-    variant: 'password',
-    label: 'Password',
+  render: args => {
+    const [show, setShow] = useState(false)
+
+    return (
+      <TextField
+        {...args}
+        variant={show ? 'default' : 'password'}
+        iconEnd={
+          show ? (
+            <EyeOpenIcon onClick={() => setShow(!show)} />
+          ) : (
+            <EyeCloseIcon onClick={() => setShow(!show)} />
+          )
+        }
+      />
+    )
   },
 }
 
 export const SearchTextField: Story = {
   args: {
     variant: 'search',
+    iconStart: <SearchIcon />,
   },
 }
 

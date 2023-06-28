@@ -12,6 +12,5 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-const Memo = memo(SvgComponent)
 
-export { Memo as LogoutIcon }
+export const LogoutIcon = memo(SvgComponent)
