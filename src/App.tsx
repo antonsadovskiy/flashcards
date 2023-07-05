@@ -1,3 +1,5 @@
+import { RadioGroup } from './components/ui/radio-group'
+
 export const App = () => {
-  return <div></div>
+  return <RadioGroup />
 }

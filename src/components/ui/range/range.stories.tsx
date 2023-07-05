@@ -40,3 +40,5 @@ export const MultipleRange: Story = {
     return <Range value={value} multiple onChange={changeHandler} {...args} />
   },
 }
+
+export const Simple: Story = {}

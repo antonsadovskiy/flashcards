@@ -4,7 +4,7 @@ import { Typography } from '../typography'
 
 import s from './textfield.module.scss'
 
-type TextFieldProps = {
+export type TextFieldProps = {
   variant?: 'default' | 'password' | 'search'
   disabled?: boolean
   error?: string
@@ -30,7 +30,7 @@ export const TextField = (props: TextFieldProps) => {
 
   return (
     <div className={s.inputContainer}>
-      {props.variant && (
+      {props.label && (
         <Typography variant={'body2'} className={disabled ? s.disabled : s.label}>
           {label}
         </Typography>

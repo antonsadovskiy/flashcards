@@ -6,7 +6,7 @@ import { Typography } from '../typography'
 
 import s from './checkbox.module.scss'
 
-type CheckboxProps = {
+export type CheckboxProps = {
   checked?: boolean
   label?: string
   disabled?: boolean
